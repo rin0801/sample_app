@@ -1,0 +1,53 @@
+[4.6.1]
+>>def string_shuffle(s)
+>>  s.split('').shuffle.join
+>>end
+=> nil
+>>string_shuffle("foobar")
+
+[4.6.2]
+>>class String
+>>  def shuffle
+>>    self.split('').shuffle.join
+>>  end
+>>end
+=> nil
+>>"foobar".shuffle
+
+[4.6.3]
+irb(main):001:0> person1 = {}
+=> {}
+irb(main):002:0> person2 = {}
+=> {}
+irb(main):003:0> person3 = {}
+=> {}
+irb(main):004:0> person1["first"] = "sakura"
+=> "sakura"
+irb(main):005:0> person1["last"] = "kinomoto"
+=> "kinomoto"
+irb(main):006:0> person2["first"] = "tomoyo"
+=> "tomoyo"
+irb(main):007:0> person2["last"] = "daidouji"
+=> "daidouji"
+irb(main):008:0> person3["first"] = "yukito"
+=> "yukito"
+irb(main):009:0> person3["last"] = "tsukishiro"
+=> "tsukishiro"
+irb(main):010:0> params = {}
+=> {}
+irb(main):011:0> params[:father] = { first: "sakura", last: "kinomoto" }
+=> {:first=>"sakura", :last=>"kinomoto"}
+irb(main):012:0> params[:mother] = { first: "tomoyo", last: "daidouji" }
+=> {:first=>"tomoyo", :last=>"daidouji"}
+irb(main):013:0> params[:child] = { first: "yukito", last: "tsukishiro" }
+=> {:first=>"yukito", :last=>"tsukishiro"}
+irb(main):014:0> 
+irb(main):015:0* params[:father][:first]
+=> "sakura"
+irb(main):016:0> params[:mother][:last]
+=> "daidouji"
+irb(main):017:0> params[:child][:last]
+=> "tsukishiro"
+irb(main):018:0>
+
+
